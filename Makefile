@@ -28,7 +28,7 @@ dump:  get-secrets opensearch dashboard run-dump
 run-apply:  
 	kubectl apply -k .
 
-apply: helm get-secrets opensearch run-apply
+apply: helm get-secrets get-config opensearch run-apply
 
 run-destroy:
 	kubectl delete -k .
