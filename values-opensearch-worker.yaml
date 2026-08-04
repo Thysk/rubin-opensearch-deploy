@@ -67,25 +67,25 @@ config:
 
         ssl:
           transport:
-            pemcert_filepath: hostcert.pem
-            pemkey_filepath: hostkey.pem
-            pemtrustedcas_filepath: root-ca.pem
+            pemcert_filepath: /usr/share/opensearch/config/hostcert.pem
+            pemkey_filepath: /usr/share/opensearch/config/hostkey.pem
+            pemtrustedcas_filepath: /usr/share/opensearch/config/root-ca.pem
             enforce_hostname_verification: 'false'
             resolve_hostname: 'true'
 
           http:
             enabled: 'true'
-            pemcert_filepath: hostcert.pem
-            pemkey_filepath: hostkey.pem
-            pemtrustedcas_filepath: root-ca.pem
+            pemcert_filepath: /usr/share/opensearch/config/hostcert.pem
+            pemkey_filepath: /usr/share/opensearch/config/hostkey.pem
+            pemtrustedcas_filepath: /usr/share/opensearch/config/root-ca.pem
             clientauth_mode: OPTIONAL
 
         nodes_dn:
-        - CN=usdf-opensearch.slac.stanford.edu,O=Stanford University,ST=California,C=US,DC=incommon,DC=org
+        - CN=usdf-opensearch.slac.stanford.edu,O=Stanford University,ST=California,C=US
         
         authcz:
           admin_dn:
-          - CN=usdf-opensearch.slac.stanford.edu,O=Stanford University,ST=California,C=US,DC=incommon,DC=org
+          - CN=usdf-opensearch.slac.stanford.edu,O=Stanford University,ST=California,C=US
         cache:
           ttl_minutes: '60'
         
